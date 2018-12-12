@@ -43,3 +43,13 @@ console.log(checkPalindrome("toot"));       // True
 console.log(checkPalindrome("Toot"));       // True
 
 // Problem 3
+function sumDigits(num){
+    let str = num.toString();               // Make to string so we can separate the digits
+    let sum = 0;                            // Runnning sum variable
+    for (let i=0;i<str.length;i++){         // Iterate through length of number
+       sum += parseInt(str.charAt(i));      // Make the char back to int for adding
+    };
+    return sum;                             // Return running sum
+};
+
+console.log(sumDigits(42));
