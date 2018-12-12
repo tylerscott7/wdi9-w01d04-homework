@@ -16,4 +16,30 @@
 //    re-evaluate the same thing multiple times, you can
 //    simply wrap the action in a function to call on.
 //
-// 
+// Problem 2
+
+function checkPalindrome(string) {
+    // Check first and last index to see if equal
+    // If not equal, return false
+    let lastIndex = string.length-1;
+    const centerIndex = Math.floor(lastIndex/2);
+    let str = string.toUpperCase();         // Makes letters the same case
+    for (let i = 0; i<=centerIndex; i++){
+        if (str.charAt(i) == str.charAt(lastIndex-i)){
+            if (centerIndex == i){
+                return true;
+            }
+        } else {
+            return false;
+        }
+    }
+};
+
+console.log(checkPalindrome('Hello'));      // False
+console.log(checkPalindrome("racecar"));    // True
+console.log(checkPalindrome("Racecar"));    // True
+console.log(checkPalindrome("hello"));      // False
+console.log(checkPalindrome("toot"));       // True
+console.log(checkPalindrome("Toot"));       // True
+
+// Problem 3
