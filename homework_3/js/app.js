@@ -73,3 +73,23 @@ function sumArray (arr){
 };
 
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
+
+// Problem 6
+function checkPrime (num){
+    for (let i = 2; i < Math.sqrt(num); i++){
+        if (num % i == 0) {
+            return false;
+        }
+    }
+    return true;
+};
+
+function printPrimes (num){
+    for (let i = 0; i <= num; i++){
+        if (checkPrime(i)){
+            console.log(i);
+        };
+    };
+};
+
+printPrimes(97);
