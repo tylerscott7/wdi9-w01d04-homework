@@ -53,3 +53,11 @@ function sumDigits(num){
 };
 
 console.log(sumDigits(42));
+
+// Problem 4
+function calculateSide (sideA, sideB){
+    // a^2 + b^2 = c^2, c = sqrt(a^2 + b^2)
+    return Math.sqrt(sideA*sideA + sideB*sideB);
+}
+
+console.log(calculateSide(8,6));
